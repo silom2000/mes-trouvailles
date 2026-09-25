@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratoire des Trouvailles | Mes recommandations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Цветовая палитра: Чистый "лабораторный" стиль с теплыми акцентами */
+            --bg-color: #f4f7fb;
+            --card-bg: #ffffff;
+            --text-main: #2d3748;
+            --text-muted: #718096;
+            --accent: #4299e1;
+            --accent-hover: #3182ce;
+            --accent-gradient: linear-gradient(135deg, #4299e1 0%, #63b3ed 100%);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px; /* Идеально для телефона */
+            padding: 40px 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Профиль */
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 10px 25px rgba(66, 153, 225, 0.2);
+        }
+
+        .verified-badge {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: var(--card-bg);
+            border-radius: 50%;
+            padding: 2px;
+        }
+
+        .username {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 5px 0;
+            color: var(--text-main);
+        }
+
+        .bio {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Кнопки / Ссылки */
+        .links-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 15px 20px;
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .link-card:hover, .link-card:active {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(66, 153, 225, 0.15);
+            border-color: rgba(66, 153, 225, 0.3);
+        }
+
+        .link-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .link-text {
+            flex-grow: 1;
+            font-size: 15px;
+        }
+
+        .link-arrow {
+            color: var(--text-muted);
+            opacity: 0.5;
+        }
+
+        /* Выделенная главная ссылка */
+        .link-card.highlight {
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+        }
+
+        .link-card.highlight .link-arrow,
+        .link-card.highlight .link-icon {
+            color: white;
+            opacity: 1;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- БЛОК ПРОФИЛЯ -->
+    <div class="profile">
+        <div class="avatar-container">
+            <!-- Укажите тут ссылку на вашу аватарку (Pixar-девушка) -->
+            <img class="avatar" src="https://i.ibb.co/kV0kdBsw/scene-2-1790350337391.jpg" alt="Avatar">
+            <svg class="verified-badge" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" fill="#4299E1"/>
+                <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h1 class="username">@bertranna</h1>
+        <p class="bio">🔬 La science au service de votre maison.<br>Mes outils et astuces préférés 👇</p> <!-- Наука на службе вашего дома. Мои любимые инструменты -->
+    </div>
+
+    <!-- ВАШИ ССЫЛКИ НА ТОВАРЫ -->
+    <div class="links-container">
+
+        <!-- Выделенная кнопка (главный хит) -->
+        <a href="ССЫЛКА_AMAZON_СЮДА" class="link-card highlight" target="_blank">
+            <span class="link-icon">💦</span>
+            <span class="link-text">Extracteur nettoyeur Bissell (Anti-taches)</span>
+            <span class="link-arrow">➔</span>
+        </a>
+
+        <!-- Обычные кнопки -->
+        <a href="ССЫЛКА_AMAZON_СЮДА" class="link-card" target="_blank">
+            <span class="link-icon">🧹</span>
+            <span class="link-text">Brosse de nettoyage électrique (Joints parfaits)</span>
+            <span class="link-arrow">➔</span>
+        </a>
+
+        <a href="ССЫЛКА_AMAZON_СЮДА" class="link-card" target="_blank">
+            <span class="link-icon">🐌</span>
+            <span class="link-text">Ruban en cuivre (Stop Limaces sans poison)</span>
+            <span class="link-arrow">➔</span>
+        </a>
+
+        <a href="ССЫЛКА_AMAZON_СЮДА" class="link-card" target="_blank">
+            <span class="link-icon">🌿</span>
+            <span class="link-text">Gel d'Aloe Vera Bio (Secret cheveux)</span>
+            <span class="link-arrow">➔</span>
+        </a>
+
+    </div>
+
+    <div class="footer">
+        © 2026 Laboratoire des Trouvailles
+    </div>
+</div>
+
+</body>
+</html>
