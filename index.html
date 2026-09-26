@@ -2,388 +2,1138 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratoire des Trouvailles</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Laboratoire des Trouvailles | Trouve ton produit TikTok</title>
+    <!-- Google Fonts: Syne (стильный дисплейный) + Plus Jakarta Sans (премиальный и легко читаемый) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --sage:       #EDF4EF;
-            --sage-mid:   #C8E6D0;
-            --forest:     #2A5C45;
-            --forest-dk:  #1A3A2A;
-            --mint:       #74C69D;
-            --amber:      #F4A261;
-            --amber-dk:   #E07830;
-            --white:      #FFFFFF;
-            --muted:      #6B8F71;
-            --card-bdr:   rgba(42,92,69,.09);
-            color-scheme: light;
+            --bg: #0F1722;
+            --bg-elevated: #162232;
+            --bg-glass: rgba(22, 34, 50, 0.75);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --border-highlight: rgba(77, 208, 164, 0.35);
+
+            --emerald: #10B981;
+            --mint: #34D399;
+            --cyan: #06B6D4;
+            --amber: #F59E0B;
+            --amber-bright: #FBBF24;
+            --rose: #F43F5E;
+
+            --text-title: #F8FAFC;
+            --text-body: #94A3B8;
+            --text-muted: #64748B;
+
+            --glow-mint: rgba(52, 211, 153, 0.25);
+            --glow-amber: rgba(245, 158, 11, 0.25);
+
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 10px;
+
+            color-scheme: dark;
         }
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
 
         body {
-            font-family: 'Nunito', sans-serif;
-            background: var(--sage);
-            color: var(--forest-dk);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-title);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             overflow-x: hidden;
+            background-image:
+                radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.15) 0%, transparent 60%),
+                radial-gradient(circle at 10% 40%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
+            background-attachment: fixed;
         }
 
-        /* ── Молекулы фона ───────────────────────────────── */
-        .particles { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
-        .p { position: absolute; border-radius: 50%; background: var(--mint); animation: float linear infinite; }
-        .p:nth-child(1)  { width:7px;  height:7px;  left:8%;  animation-duration:15s; animation-delay:0s;  opacity:.15; }
-        .p:nth-child(2)  { width:4px;  height:4px;  left:22%; animation-duration:19s; animation-delay:3s;  opacity:.12; }
-        .p:nth-child(3)  { width:10px; height:10px; left:38%; animation-duration:12s; animation-delay:5s;  opacity:.09; }
-        .p:nth-child(4)  { width:5px;  height:5px;  left:54%; animation-duration:17s; animation-delay:1s;  opacity:.14; }
-        .p:nth-child(5)  { width:8px;  height:8px;  left:68%; animation-duration:14s; animation-delay:7s;  opacity:.11; }
-        .p:nth-child(6)  { width:3px;  height:3px;  left:82%; animation-duration:21s; animation-delay:4s;  opacity:.18; }
-        .p:nth-child(7)  { width:6px;  height:6px;  left:14%; animation-duration:16s; animation-delay:9s;  opacity:.13; }
-        .p:nth-child(8)  { width:9px;  height:9px;  left:58%; animation-duration:13s; animation-delay:6s;  opacity:.10; }
-        @keyframes float {
-            0%   { transform: translateY(105vh); opacity: 0; }
-            8%   { opacity: .18; }
-            92%  { opacity: .10; }
-            100% { transform: translateY(-8vh);  opacity: 0; }
+        /* ── Живой лабораторный фон ── */
+        .ambient-canvas {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.3;
+            animation: drift 18s ease-in-out infinite alternate;
+        }
+        .orb-1 { width: 320px; height: 320px; background: var(--mint); top: -80px; left: -80px; animation-duration: 22s; }
+        .orb-2 { width: 280px; height: 280px; background: var(--cyan); top: 35%; right: -100px; animation-duration: 18s; animation-delay: -5s; }
+        .orb-3 { width: 240px; height: 240px; background: var(--amber); bottom: 5%; left: -60px; animation-duration: 25s; animation-delay: -10s; }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(40px, 30px) scale(1.1); }
+            100% { transform: translate(-20px, 60px) scale(0.95); }
         }
 
-        /* ── Страница ────────────────────────────────────── */
-        .page {
-            position: relative; z-index: 1;
-            width: 100%; max-width: 440px;
-            padding: 46px 20px 44px;
-            display: flex; flex-direction: column; align-items: center;
-        }
-
-        /* ── Герой ────────────────────────────────────────── */
-        .hero { display: flex; flex-direction: column; align-items: center; margin-bottom: 28px; animation: fadeUp .65s ease both; }
-        @keyframes fadeUp { from { opacity:0; transform:translateY(-14px); } to { opacity:1; transform:translateY(0); } }
-
-        .avatar-wrap { position: relative; width: 108px; height: 108px; margin-bottom: 16px; }
-        .avatar-glow {
-            position: absolute; inset: -10px; border-radius: 50%;
-            background: radial-gradient(circle, rgba(116,198,157,.42) 0%, transparent 70%);
-            animation: pulse 3s ease-in-out infinite;
-        }
-        @keyframes pulse { 0%,100%{transform:scale(1);opacity:.65;} 50%{transform:scale(1.15);opacity:1;} }
-        .avatar-img {
-            position: relative; width: 108px; height: 108px; border-radius: 50%;
-            object-fit: cover; border: 3.5px solid var(--white);
-            box-shadow: 0 8px 26px rgba(42,92,69,.20); display: block;
-        }
-        .avatar-badge {
-            position: absolute; bottom: 2px; right: 2px;
-            width: 27px; height: 27px; background: var(--white); border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 14px; box-shadow: 0 2px 8px rgba(0,0,0,.12);
-        }
-        .brand-name { font-size: 21px; font-weight: 900; letter-spacing: -.3px; color: var(--forest); text-align: center; line-height: 1.15; }
-        .brand-sub  { font-size: 12.5px; font-weight: 500; color: var(--muted); margin-top: 5px; text-align: center; line-height: 1.45; }
-
-        /* ── Главный хит ────────────────────────────────── */
-        .featured {
+        /* ── Основной фрейм приложения ── */
+        .app-shell {
+            position: relative;
+            z-index: 1;
             width: 100%;
-            display: flex; align-items: center; gap: 13px;
-            padding: 16px 18px; border-radius: 18px;
-            text-decoration: none;
-            background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dk) 100%);
-            box-shadow: 0 8px 24px rgba(244,162,97,.38);
-            position: relative; overflow: hidden;
-            transition: transform .22s ease, box-shadow .22s ease;
-            margin-bottom: 22px;
-            animation: fadeUp .5s ease .1s both;
-        }
-        .featured::before {
-            content: ''; position: absolute; top:-45px; right:-45px;
-            width:130px; height:130px; border-radius:50%; background:rgba(255,255,255,.10);
-        }
-        .featured:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(244,162,97,.48); }
-        .featured:active { transform: translateY(-1px); }
-
-        .featured-icon { font-size: 28px; flex-shrink: 0; }
-        .featured-body { flex: 1; min-width: 0; }
-        .featured-badge {
-            display: inline-flex; align-items: center; gap: 4px;
-            font-size: 10px; font-weight: 800;
-            color: var(--amber-dk); background: var(--white);
-            border-radius: 20px; padding: 2px 8px; margin-bottom: 5px;
-        }
-        .featured-title { font-size: 15px; font-weight: 800; color: #fff; line-height: 1.2; }
-        .featured-sub   { font-size: 11.5px; font-weight: 500; color: rgba(255,255,255,.82); margin-top: 2px; }
-        .featured-arrow {
-            flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%;
-            background: rgba(255,255,255,.22); display: flex; align-items: center; justify-content: center;
-            transition: background .2s, transform .2s;
-        }
-        .featured:hover .featured-arrow { background: rgba(255,255,255,.35); transform: translateX(2px); }
-        .featured-arrow svg { width: 14px; height: 14px; fill: none; stroke: #fff; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
-
-        /* ── Вкладки ─────────────────────────────────────── */
-        .tabs-wrap {
-            width: 100%;
-            animation: fadeUp .5s ease .18s both;
+            max-width: 480px;
+            padding: 32px 18px 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
         }
 
-        .tabs-nav {
-            display: flex; gap: 6px;
-            background: var(--white);
-            border-radius: 14px; padding: 5px;
-            box-shadow: 0 2px 8px rgba(42,92,69,.08);
+        /* ── Шапка лаборатории ── */
+        .lab-header {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .avatar-pod {
+            position: relative;
+            width: 104px;
+            height: 104px;
             margin-bottom: 14px;
         }
-        .tab-btn {
-            flex: 1; display: flex; align-items: center; justify-content: center; gap: 5px;
-            padding: 9px 6px; border-radius: 10px; border: none;
-            background: transparent; cursor: pointer;
-            font-family: 'Nunito', sans-serif;
-            font-size: 12.5px; font-weight: 700;
-            color: var(--muted);
-            transition: background .2s, color .2s;
-            -webkit-tap-highlight-color: transparent;
+        .pod-ring {
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--mint), var(--cyan), var(--amber));
+            animation: spin 10s linear infinite;
+            filter: drop-shadow(0 0 16px rgba(52, 211, 153, 0.4));
         }
-        .tab-btn .tab-icon { font-size: 16px; }
-        .tab-btn:hover { background: var(--sage); color: var(--forest); }
-        .tab-btn.active {
-            background: var(--forest);
-            color: #fff;
-            box-shadow: 0 3px 10px rgba(42,92,69,.22);
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        .avatar-frame {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--bg-elevated);
+            border: 3px solid var(--bg);
+        }
+        .avatar-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .status-pill {
+            position: absolute;
+            bottom: -2px;
+            right: -2px;
+            background: #052E16;
+            border: 2px solid #10B981;
+            color: #6EE7B7;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: #34D399;
+            border-radius: 50%;
+            box-shadow: 0 0 6px #34D399;
+            animation: pulse-dot 1.8s infinite;
+        }
+        @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+        .lab-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #FFFFFF 30%, #94A3B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 4px;
+        }
+        .lab-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--text-body);
+            backdrop-filter: blur(10px);
         }
 
-        /* ── Список товаров ───────────────────────────────── */
-        .tab-panel { display: none; flex-direction: column; gap: 10px; }
-        .tab-panel.active { display: flex; animation: panelIn .3s ease both; }
-        @keyframes panelIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
-
-        .prod-card {
-            display: flex; align-items: center; gap: 13px;
-            padding: 14px 16px; border-radius: 15px;
-            text-decoration: none;
-            background: var(--white);
-            border: 1.5px solid var(--card-bdr);
-            box-shadow: 0 2px 8px rgba(42,92,69,.06);
-            transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-            -webkit-tap-highlight-color: transparent;
+        /* ── ЦИФРОВОЙ ТЕРМИНАЛ НАХОДКИ (PRODUCT CODE) ── */
+        .terminal-card {
+            background: linear-gradient(180deg, rgba(22, 34, 50, 0.9) 0%, rgba(15, 23, 34, 0.95) 100%);
+            border: 1px solid var(--border-highlight);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 24px rgba(52, 211, 153, 0.12);
+            backdrop-filter: blur(16px);
+            position: relative;
+            overflow: hidden;
         }
-        .prod-card:hover {
+        .terminal-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--mint), var(--amber), transparent);
+        }
+
+        .terminal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .terminal-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--mint);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .terminal-hint {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* Дисплей ввода кода */
+        .code-display {
+            background: rgba(10, 15, 22, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-md);
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            transition: all 0.25s ease;
+        }
+        .code-display:focus-within {
+            border-color: var(--mint);
+            box-shadow: 0 0 20px var(--glow-mint);
+        }
+        .code-input-wrap {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            width: 100%;
+        }
+        .code-prefix {
+            font-family: 'Syne', sans-serif;
+            font-size: 26px;
+            color: var(--mint);
+            font-weight: 800;
+        }
+        .code-input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-family: 'Syne', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: 2px;
+        }
+        .code-input::placeholder {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-muted);
+            letter-spacing: normal;
+        }
+        .btn-clear {
+            background: rgba(255, 255, 255, 0.08);
+            border: none;
+            color: var(--text-muted);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 12px;
+        }
+        .btn-clear:hover { background: rgba(255, 255, 255, 0.2); color: #fff; }
+
+        /* Цифровая клавиатура (Keypad) */
+        .keypad-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        .key-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius-sm);
+            padding: 12px;
+            font-family: 'Syne', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-title);
+            cursor: pointer;
+            transition: all 0.15s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+        .key-btn:hover {
+            background: rgba(52, 211, 153, 0.15);
+            border-color: var(--mint);
+            color: #FFFFFF;
             transform: translateY(-2px);
-            box-shadow: 0 8px 22px rgba(42,92,69,.12);
-            border-color: rgba(116,198,157,.45);
         }
-        .prod-card:active { transform: translateY(0); }
-        .prod-icon  { font-size: 24px; flex-shrink: 0; }
-        .prod-body  { flex: 1; min-width: 0; }
-        .prod-title { font-size: 13.5px; font-weight: 700; color: var(--forest-dk); line-height: 1.25; }
-        .prod-sub   { font-size: 11.5px; font-weight: 500; color: var(--muted); margin-top: 2px; }
-        .prod-arrow {
-            flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
-            background: var(--sage); display: flex; align-items: center; justify-content: center;
-            transition: background .2s, transform .2s;
+        .key-btn:active {
+            transform: scale(0.95);
         }
-        .prod-card:hover .prod-arrow { background: var(--sage-mid); transform: translateX(2px); }
-        .prod-arrow svg { width: 13px; height: 13px; fill: none; stroke: var(--forest); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
-
-        /* Пусто */
-        .empty { text-align: center; padding: 28px 16px; color: var(--muted); font-size: 13px; font-weight: 600; }
-        .empty-icon { font-size: 32px; margin-bottom: 8px; display: block; }
-
-        /* ── Подвал ───────────────────────────────────────── */
-        .footer { margin-top: 30px; text-align: center; }
-        .footer-brand { font-size: 13px; font-weight: 800; color: var(--forest); }
-        .footer-copy  { font-size: 11px; color: var(--muted); margin-top: 3px; }
-        .amz-tag {
-            display: inline-block; font-size: 9.5px; font-weight: 700;
-            background: rgba(42,92,69,.10); color: var(--forest);
-            border-radius: 6px; padding: 2px 7px; margin-top: 6px;
+        .key-btn.action {
+            background: rgba(245, 158, 11, 0.12);
+            border-color: rgba(245, 158, 11, 0.3);
+            color: var(--amber-bright);
+            font-size: 14px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+        }
+        .key-btn.action:hover {
+            background: var(--amber);
+            color: #000;
         }
 
-        .prod-card:focus-visible, .tab-btn:focus-visible, .featured:focus-visible
-            { outline: 3px solid var(--mint); outline-offset: 3px; }
+        /* Быстрые фишки последних видео */
+        .recent-chips {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+            scrollbar-width: none;
+        }
+        .recent-chips::-webkit-scrollbar { display: none; }
+        .chips-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+        .chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 4px 10px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--mint);
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .chip:hover {
+            background: var(--mint);
+            color: #000;
+        }
 
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation: none !important; transition: none !important; }
-            .tab-panel { display: none; }
-            .tab-panel.active { display: flex; opacity: 1; }
-            .featured, .tabs-wrap, .hero { opacity: 1 !important; transform: none !important; }
+        /* ── Навигация по категориям (Фильтры) ── */
+        .category-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            padding: 4px 0;
+        }
+        .category-scroll::-webkit-scrollbar { display: none; }
+        .cat-btn {
+            background: rgba(22, 34, 50, 0.7);
+            border: 1px solid var(--border-glass);
+            border-radius: 30px;
+            padding: 8px 14px;
+            color: var(--text-body);
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            transition: all 0.2s;
+            backdrop-filter: blur(10px);
+        }
+        .cat-btn.active {
+            background: var(--text-title);
+            color: var(--bg);
+            border-color: #fff;
+            box-shadow: 0 4px 14px rgba(255, 255, 255, 0.2);
+        }
+
+        /* ── Сетка товаров ── */
+        .catalog-section {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0 4px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: -0.2px;
+            color: #FFFFFF;
+        }
+        .section-count {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        /* Карточка товара */
+        .product-card {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 14px;
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            gap: 14px;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(12px);
+            overflow: hidden;
+        }
+        .product-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(52, 211, 153, 0.4);
+            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(52, 211, 153, 0.12);
+        }
+        .product-card:active {
+            transform: scale(0.98);
+        }
+
+        /* Номер товара (Product Code) на карточке */
+        .badge-code {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            background: rgba(15, 23, 34, 0.85);
+            border: 1px solid rgba(52, 211, 153, 0.4);
+            color: var(--mint);
+            font-family: 'Syne', sans-serif;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 2px 7px;
+            border-radius: 6px;
+            backdrop-filter: blur(4px);
+        }
+
+        .card-thumb-wrap {
+            position: relative;
+            width: 90px;
+            height: 90px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            background: #1E293B;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .product-card:hover .card-thumb {
+            transform: scale(1.08);
+        }
+
+        .card-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 0;
+        }
+        .card-tag {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--amber);
+            margin-bottom: 2px;
+            letter-spacing: 0.5px;
+        }
+        .card-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.3;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .card-quote {
+            font-size: 11.5px;
+            color: var(--text-body);
+            line-height: 1.35;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+        .card-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .card-price-est {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--mint);
+        }
+        .btn-view-pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.2s;
+        }
+        .product-card:hover .btn-view-pill {
+            background: var(--mint);
+            color: #000;
+            border-color: var(--mint);
+        }
+
+        /* Выделение любимого товара (Coup de Cœur) */
+        .product-card.featured-glow {
+            border-color: rgba(245, 158, 11, 0.4);
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(36, 26, 12, 0.8) 100%);
+        }
+        .product-card.featured-glow::before {
+            content: '⭐ TOP DU LABO';
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            font-size: 9px;
+            font-weight: 800;
+            color: var(--amber-bright);
+            letter-spacing: 0.5px;
+        }
+
+        /* ── МОДАЛЬНОЕ ОКНО ТОВАРА (ДЕТАЛИ + ПЕРЕХОД В AMAZON) ── */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(5, 10, 16, 0.85);
+            backdrop-filter: blur(12px);
+            z-index: 999;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .modal-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-sheet {
+            background: #162232;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 28px 28px 0 0;
+            width: 100%;
+            max-width: 480px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            transform: translateY(100%);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.7);
+        }
+        .modal-overlay.open .modal-sheet {
+            transform: translateY(0);
+        }
+
+        .modal-drag-bar {
+            width: 40px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            align-self: center;
+            margin-bottom: -6px;
+        }
+
+        .modal-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-code-badge {
+            background: rgba(52, 211, 153, 0.15);
+            border: 1px solid var(--mint);
+            color: var(--mint);
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .modal-close-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: none;
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .modal-img-container {
+            width: 100%;
+            height: 220px;
+            background: #0B111A;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .modal-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-details {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .modal-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #FFFFFF;
+            line-height: 1.3;
+        }
+        .modal-verdict-box {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 3px solid var(--mint);
+            padding: 10px 14px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            font-size: 12.5px;
+            color: #D1FAE5;
+            line-height: 1.45;
+        }
+        .modal-verdict-box strong {
+            color: var(--mint);
+            display: block;
+            margin-bottom: 2px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-features {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin: 6px 0;
+        }
+        .modal-feat-item {
+            font-size: 12px;
+            color: var(--text-body);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .modal-feat-item span {
+            color: var(--mint);
+            font-weight: 800;
+        }
+
+        /* Главная кнопка в Amazon */
+        .btn-amazon-primary {
+            background: linear-gradient(135deg, #FF9900 0%, #E67A00 100%);
+            color: #111827;
+            font-size: 15px;
+            font-weight: 800;
+            padding: 16px 20px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 8px 24px rgba(230, 122, 0, 0.35);
+            transition: all 0.2s ease;
+        }
+        .btn-amazon-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(230, 122, 0, 0.5);
+            color: #000;
+        }
+        .btn-amazon-primary:active {
+            transform: scale(0.98);
+        }
+
+        /* Состояние ошибки поиска */
+        .search-not-found {
+            display: none;
+            background: rgba(244, 63, 94, 0.1);
+            border: 1px solid rgba(244, 63, 94, 0.3);
+            border-radius: var(--radius-md);
+            padding: 14px;
+            text-align: center;
+            font-size: 12.5px;
+            color: #FECDD3;
+            margin-top: 10px;
+            animation: shake 0.3s ease;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-6px); }
+            75% { transform: translateX(6px); }
+        }
+
+        /* Подвал */
+        .lab-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 11px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .amz-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            padding: 3px 10px;
+            border-radius: 12px;
+            color: var(--text-body);
+            font-size: 10px;
+            margin-top: 6px;
         }
     </style>
 </head>
 <body>
 
-<div class="particles" aria-hidden="true">
-    <div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div>
-    <div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div>
-</div>
-
-<div class="page">
-
-    <!-- Герой -->
-    <div class="hero">
-        <div class="avatar-wrap">
-            <div class="avatar-glow" aria-hidden="true"></div>
-            <img class="avatar-img"
-                 src="https://i.ibb.co/kV0kdBsw/scene-2-1790350337391.jpg"
-                 alt="Chercheuse Laboratoire des Trouvailles"
-                 onerror="this.src='https://ui-avatars.com/api/?name=Lab&background=74C69D&color=fff&size=200'">
-            <div class="avatar-badge" aria-hidden="true">🔬</div>
-        </div>
-        <h1 class="brand-name">Laboratoire<br>des Trouvailles</h1>
-        <p class="brand-sub">La science au service de votre maison<br>@bertranna · TikTok</p>
+    <!-- Живые сферы фона -->
+    <div class="ambient-canvas">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
     </div>
 
-    <!-- Главный хит (всегда виден) -->
-    <a id="featured-link" href="#" class="featured" target="_blank" rel="nofollow noopener">
-        <span class="featured-icon" id="featured-icon">💦</span>
-        <span class="featured-body">
-            <span class="featured-badge">⭐ Coup de cœur du labo</span>
-            <span class="featured-title" id="featured-title">Extracteur portable BISSELL</span>
-            <span class="featured-sub" id="featured-sub">Efface les taches de matelas &amp; canapé</span>
-        </span>
-        <span class="featured-arrow">
-            <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </span>
-    </a>
+    <div class="app-shell">
 
-    <!-- Вкладки -->
-    <div class="tabs-wrap">
-        <nav class="tabs-nav" role="tablist" aria-label="Catégories de produits">
-            <button class="tab-btn active" role="tab" data-tab="nettoyage" aria-selected="true">
-                <span class="tab-icon">🧹</span> Nettoyage
-            </button>
-            <button class="tab-btn" role="tab" data-tab="jardin" aria-selected="false">
-                <span class="tab-icon">🌱</span> Jardin
-            </button>
-            <button class="tab-btn" role="tab" data-tab="beaute" aria-selected="false">
-                <span class="tab-icon">🌿</span> Beauté
-            </button>
+        <!-- 1. ШАПКА ЛАБОРАТОРИИ -->
+        <header class="lab-header">
+            <div class="avatar-pod">
+                <div class="pod-ring"></div>
+                <div class="avatar-frame">
+                    <img src="https://i.ibb.co/kV0kdBsw/scene-2-1790350337391.jpg" alt="Lab Scientist">
+                </div>
+                <div class="status-pill">
+                    <span class="status-dot"></span> EN LIGNE
+                </div>
+            </div>
+            <h1 class="lab-title">Laboratoire des Trouvailles</h1>
+            <div class="lab-badge">
+                🔬 Trouve l'outil vu dans mes vidéos TikTok
+            </div>
+        </header>
+
+        <!-- 2. ЦИФРОВОЙ ТЕРМИНАЛ: ВВОД КОДА ИЗ ВИДЕО -->
+        <section class="terminal-card">
+            <div class="terminal-header">
+                <div class="terminal-label">
+                    <span>⚡</span> ENTRER LE CODE PRODUIT
+                </div>
+                <div class="terminal-hint">Vu dans le TikTok</div>
+            </div>
+
+            <!-- Поле ввода кода -->
+            <div class="code-display">
+                <div class="code-input-wrap">
+                    <span class="code-prefix">#</span>
+                    <input type="number" id="codeInput" class="code-input" placeholder="ex: 12, 05, 42..." inputmode="numeric">
+                </div>
+                <button id="btnClear" class="btn-clear" title="Effacer">✕</button>
+            </div>
+
+            <!-- Цифровая клавиатура (Быстрый тап пальцем) -->
+            <div class="keypad-grid">
+                <button class="key-btn" onclick="pressKey('1')">1</button>
+                <button class="key-btn" onclick="pressKey('2')">2</button>
+                <button class="key-btn" onclick="pressKey('3')">3</button>
+                <button class="key-btn" onclick="pressKey('4')">4</button>
+                <button class="key-btn" onclick="pressKey('5')">5</button>
+                <button class="key-btn" onclick="pressKey('6')">6</button>
+                <button class="key-btn" onclick="pressKey('7')">7</button>
+                <button class="key-btn" onclick="pressKey('8')">8</button>
+                <button class="key-btn" onclick="pressKey('9')">9</button>
+                <button class="key-btn action" onclick="clearCode()">C</button>
+                <button class="key-btn" onclick="pressKey('0')">0</button>
+                <button class="key-btn action" onclick="submitSearch()">OK ➔</button>
+            </div>
+
+            <!-- Ошибка поиска (если код не существует) -->
+            <div id="searchNotFound" class="search-not-found">
+                ⚠️ Oups ! Le code <strong>#<span id="errCode"></span></strong> n'existe pas encore. Choisis un produit ci-dessous 👇
+            </div>
+
+            <!-- Быстрые фишки последних роликов -->
+            <div class="recent-chips">
+                <span class="chips-label">Vidéos récentes :</span>
+                <span class="chip" onclick="quickSelect(1)">#1 Matelas (Bissell)</span>
+                <span class="chip" onclick="quickSelect(2)">#2 Brosse Joints</span>
+                <span class="chip" onclick="quickSelect(3)">#3 Anti-Limaces</span>
+                <span class="chip" onclick="quickSelect(4)">#4 Gel Cheveux</span>
+            </div>
+        </section>
+
+        <!-- 3. ФИЛЬТРЫ КАТЕГОРИЙ -->
+        <nav class="category-scroll">
+            <button class="cat-btn active" onclick="filterCat('all', this)">✨ Tous les produits</button>
+            <button class="cat-btn" onclick="filterCat('nettoyage', this)">🧹 Nettoyage &amp; Maison</button>
+            <button class="cat-btn" onclick="filterCat('jardin', this)">🌱 Jardin &amp; Extérieur</button>
+            <button class="cat-btn" onclick="filterCat('beaute', this)">🌿 Beauté &amp; Soins</button>
         </nav>
 
-        <div id="panel-nettoyage" class="tab-panel active" role="tabpanel"></div>
-        <div id="panel-jardin"    class="tab-panel" role="tabpanel"></div>
-        <div id="panel-beaute"    class="tab-panel" role="tabpanel"></div>
+        <!-- 4. КАТАЛОГ ВСЕХ ТОВАРОВ С КОДАМИ -->
+        <section class="catalog-section">
+            <div class="section-header">
+                <h2 class="section-title">Catalogue des inventions testées</h2>
+                <span id="productCount" class="section-count">4 produits</span>
+            </div>
+
+            <div id="productsGrid" class="products-grid">
+                <!-- Генерируется из JavaScript -->
+            </div>
+        </section>
+
+        <!-- 5. ПОДВАЛ -->
+        <footer class="lab-footer">
+            <div>© 2026 Laboratoire des Trouvailles · @silom2000</div>
+            <div>Sélection indépendante testée pour vous</div>
+            <div class="amz-badge">En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.</div>
+        </footer>
+
     </div>
 
-    <footer class="footer">
-        <div class="footer-brand">Laboratoire des Trouvailles</div>
-        <div class="footer-copy">© 2026 · Astuces testées &amp; approuvées</div>
-        <div><span class="amz-tag">Liens Amazon partenaires</span></div>
-    </footer>
+    <!-- 6. МОДАЛЬНОЕ ОКНО ТОВАРА (POP-UP) -->
+    <div id="productModal" class="modal-overlay" onclick="closeModalOnBg(event)">
+        <div class="modal-sheet">
+            <div class="modal-drag-bar"></div>
 
-</div>
+            <div class="modal-top-row">
+                <div class="modal-code-badge">
+                    <span>⚡ PRODUIT</span> <span id="mCode">#01</span>
+                </div>
+                <button class="modal-close-btn" onclick="closeModal()">✕</button>
+            </div>
 
-<script>
-/* ════════════════════════════════════════════════════
-   ДАННЫЕ ПРОДУКТОВ — добавляйте новые строки сюда!
-   Поля: icon, title, sub, url
-   featured: true → этот товар всегда наверху
-════════════════════════════════════════════════════ */
-const PRODUCTS = {
+            <div class="modal-img-container">
+                <img id="mImg" src="" alt="Produit">
+            </div>
 
-    nettoyage: [
-        {
-            icon:     '💦',
-            title:    'Extracteur portable BISSELL',
-            sub:      'Efface les taches de matelas & canapé en quelques secondes',
-            url:      'https://amzn.to/4xIYZza',
-            featured: true          // ← этот товар показывается как главный хит
-        },
-        {
-            icon:  '🧹',
-            title: 'Brosse de nettoyage électrique',
-            sub:   'Joints parfaits sans effort',
-            url:   'https://amzn.to/4yW8hZA'
-        },
-        // Добавьте новый товар так:
-        // { icon: '🪣', title: 'Nom du produit', sub: 'Description courte', url: 'https://amzn.to/XXXXX' },
-    ],
+            <div class="modal-details">
+                <h3 id="mTitle" class="modal-title">Titre du produit</h3>
 
-    jardin: [
-        {
-            icon:  '🐌',
-            title: 'Ruban en cuivre anti-limaces',
-            sub:   'Stop limaces sans poison !',
-            url:   'https://amzn.to/3V8MkYU'
-        },
-        // { icon: '🌸', title: 'Nom du produit', sub: 'Description courte', url: 'https://amzn.to/XXXXX' },
-    ],
+                <div class="modal-verdict-box">
+                    <strong>🔬 Le test du Laboratoire :</strong>
+                    <span id="mVerdict">Verdict du produit...</span>
+                </div>
 
-    beaute: [
-        {
-            icon:  '🌿',
-            title: 'Gel d\'Aloe Vera Bio 100%',
-            sub:   'Le secret pour des cheveux magnifiques',
-            url:   'https://amzn.to/4rxiNnO'
-        },
-        // { icon: '💆', title: 'Nom du produit', sub: 'Description courte', url: 'https://amzn.to/XXXXX' },
-    ]
-};
+                <div class="modal-features" id="mFeatures">
+                    <!-- Буллеты преимуществ -->
+                </div>
+            </div>
 
-/* ── Рендеринг ──────────────────────────────────── */
-function arrowSVG() {
-    return `<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
-}
+            <!-- Главный переход на Amazon -->
+            <a id="mAmazoneBtn" href="#" target="_blank" rel="nofollow noopener" class="btn-amazon-primary">
+                <span>Voir le prix &amp; commander sur Amazon</span>
+                <span style="font-size: 18px;">➔</span>
+            </a>
+        </div>
+    </div>
 
-function renderProducts() {
-    let featuredSet = false;
+    <!-- ═══════════════════════════════════════════════════
+         БАЗА ТОВАРОВ С НОМЕРАМИ КОДОВ ДЛЯ ВИДЕО
+         ═══════════════════════════════════════════════════ -->
+    <script>
+        const PRODUCTS_DB = [
+            {
+                code: 1,
+                title: "Extracteur portable BISSELL SpotClean Pro",
+                category: "nettoyage",
+                featured: true,
+                img: "https://m.media-amazon.com/images/I/71wZ7x9QhUL._AC_SL1500_.jpg",
+                quote: "Efface les taches incrustées de matelas, canapés et sièges auto en 30 secondes.",
+                verdict: "L'arme absolue contre les taches anciennes. Injection et aspiration puissante sans abîmer les tissus.",
+                features: [
+                    "✓ Idéal matelas, tapis, tissus d'ameublement",
+                    "✓ Réservoirs eau propre et eau sale séparés",
+                    "✓ Plus de 20 000 avis positifs en France"
+                ],
+                amazonUrl: "https://amzn.to/4xIYZza"
+            },
+            {
+                code: 2,
+                title: "Brosse de nettoyage électrique rotative",
+                category: "nettoyage",
+                featured: false,
+                img: "https://m.media-amazon.com/images/I/71R2Hj+G8BL._AC_SL1500_.jpg",
+                quote: "Nettoie les joints de carrelage et la douche sans se casser le dos ni frotter.",
+                verdict: "Fait tourner la tête à 350 tours/minute. Les joints noirs redeviennent blancs comme neufs sans effort.",
+                features: [
+                    "✓ Manche télescopique pour ne pas se pencher",
+                    "✓ 4 têtes interchangeables incluses",
+                    "✓ Batterie rechargeable longue durée"
+                ],
+                amazonUrl: "https://amzn.to/4yW8hZA"
+            },
+            {
+                code: 3,
+                title: "Ruban en cuivre pur anti-limaces",
+                category: "jardin",
+                featured: false,
+                img: "https://m.media-amazon.com/images/I/81xU9dJ5g4L._AC_SL1500_.jpg",
+                quote: "Barrière naturelle infranchissable pour les limaces et escargots sans poison.",
+                verdict: "Une micro-réaction électrique naturelle repousse immédiatement les nuisibles sans danger pour vos animaux de compagnie.",
+                features: [
+                    "✓ 100% sans produits chimiques ni poison",
+                    "✓ Résiste à la pluie et au soleil des années",
+                    "✓ Facile à coller autour des pots et potagers"
+                ],
+                amazonUrl: "https://amzn.to/3V8MkYU"
+            },
+            {
+                code: 4,
+                title: "Gel d'Aloe Vera 100% Pur & Bio",
+                category: "beaute",
+                featured: false,
+                img: "https://m.media-amazon.com/images/I/71c6P5i-vHL._AC_SL1500_.jpg",
+                quote: "Le secret naturel pour hydrater intensément les cheveux secs et apaiser la peau.",
+                verdict: "Pressé à froid sans additifs. Répare la fibre capillaire et élimine les pointes sèches dès la première application.",
+                features: [
+                    "✓ Certifié Bio & Vegan",
+                    "✓ Flacon pompe grand format très économique",
+                    "✓ Multi-usage : masque cheveux, corps et visage"
+                ],
+                amazonUrl: "https://amzn.to/4rxiNnO"
+            }
+        ];
 
-    for (const [cat, items] of Object.entries(PRODUCTS)) {
-        const panel = document.getElementById('panel-' + cat);
-        if (!panel) continue;
-        panel.innerHTML = '';
+        let currentCategory = 'all';
 
-        const nonFeatured = items.filter(p => !p.featured);
+        // Инициализация при загрузке
+        window.addEventListener('DOMContentLoaded', () => {
+            renderGrid(PRODUCTS_DB);
+            checkUrlHash();
 
-        if (nonFeatured.length === 0) {
-            panel.innerHTML = `<div class="empty"><span class="empty-icon">🔭</span>D'autres trouvailles arrivent bientôt !</div>`;
-        } else {
-            nonFeatured.forEach(p => {
-                const a = document.createElement('a');
-                a.href = p.url;
-                a.target = '_blank';
-                a.rel = 'nofollow noopener';
-                a.className = 'prod-card';
-                a.innerHTML = `
-                    <span class="prod-icon">${p.icon}</span>
-                    <span class="prod-body">
-                        <span class="prod-title">${p.title}</span>
-                        <span class="prod-sub">${p.sub}</span>
-                    </span>
-                    <span class="prod-arrow">${arrowSVG()}</span>`;
-                panel.appendChild(a);
+            // Живой поиск при вводе в input
+            const input = document.getElementById('codeInput');
+            input.addEventListener('input', (e) => {
+                const val = parseInt(e.target.value);
+                if (!isNaN(val)) {
+                    tryOpenByCode(val, false);
+                } else {
+                    document.getElementById('searchNotFound').style.display = 'none';
+                }
+            });
+
+            // Нажатие Enter
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') submitSearch();
+            });
+        });
+
+        // Клавиатура (Keypad)
+        function pressKey(num) {
+            const input = document.getElementById('codeInput');
+            input.value = (input.value || '') + num;
+            tryOpenByCode(parseInt(input.value), false);
+        }
+
+        function clearCode() {
+            const input = document.getElementById('codeInput');
+            input.value = '';
+            document.getElementById('searchNotFound').style.display = 'none';
+        }
+
+        document.getElementById('btnClear').addEventListener('click', clearCode);
+
+        function submitSearch() {
+            const input = document.getElementById('codeInput');
+            const code = parseInt(input.value);
+            if (!code) return;
+            tryOpenByCode(code, true);
+        }
+
+        function quickSelect(code) {
+            document.getElementById('codeInput').value = code;
+            tryOpenByCode(code, true);
+        }
+
+        // Поиск товара по коду
+        function tryOpenByCode(code, showAlertOnFail) {
+            const errBox = document.getElementById('searchNotFound');
+            const found = PRODUCTS_DB.find(p => p.code === code);
+
+            if (found) {
+                errBox.style.display = 'none';
+                openModal(found);
+            } else {
+                if (showAlertOnFail) {
+                    document.getElementById('errCode').textContent = code;
+                    errBox.style.display = 'block';
+                }
+            }
+        }
+
+        // Проверка #кода в URL (например site.html#1 сразу откроет товар 1)
+        function checkUrlHash() {
+            if (window.location.hash) {
+                const hashNum = parseInt(window.location.hash.replace('#', ''));
+                if (!isNaN(hashNum)) {
+                    quickSelect(hashNum);
+                }
+            }
+        }
+
+        // Отрисовка каталога
+        function renderGrid(products) {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = '';
+
+            let list = products;
+            if (currentCategory !== 'all') {
+                list = products.filter(p => p.category === currentCategory);
+            }
+
+            document.getElementById('productCount').textContent = list.length + (list.length > 1 ? ' produits' : ' produit');
+
+            list.forEach(p => {
+                const card = document.createElement('div');
+                card.className = `product-card ${p.featured ? 'featured-glow' : ''}`;
+                card.onclick = () => openModal(p);
+
+                card.innerHTML = `
+                    <div class="badge-code">#${p.code}</div>
+                    <div class="card-thumb-wrap">
+                        <img src="${p.img}" alt="${p.title}" class="card-thumb" onerror="this.src='https://placehold.co/100x100/1e293b/fff?text=%23${p.code}'">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-tag">${p.category}</div>
+                        <div class="card-title">${p.title}</div>
+                        <div class="card-quote">${p.quote}</div>
+                        <div class="card-bottom">
+                            <span class="card-price-est">Testé &amp; Validé ✓</span>
+                            <span class="btn-view-pill">Voir le test ➔</span>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
             });
         }
 
-        // Главный хит — берём первый попавшийся с featured:true
-        if (!featuredSet) {
-            const f = items.find(p => p.featured);
-            if (f) {
-                document.getElementById('featured-link').href = f.url;
-                document.getElementById('featured-icon').textContent = f.icon;
-                document.getElementById('featured-title').textContent = f.title;
-                document.getElementById('featured-sub').textContent = f.sub;
-                featuredSet = true;
+        // Фильтрация категорий
+        function filterCat(cat, btn) {
+            currentCategory = cat;
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderGrid(PRODUCTS_DB);
+        }
+
+        // Модальное окно
+        function openModal(prod) {
+            document.getElementById('mCode').textContent = '#' + prod.code;
+            document.getElementById('mTitle').textContent = prod.title;
+            document.getElementById('mImg').src = prod.img;
+            document.getElementById('mVerdict').textContent = prod.verdict;
+            document.getElementById('mAmazoneBtn').href = prod.amazonUrl;
+
+            const featContainer = document.getElementById('mFeatures');
+            featContainer.innerHTML = '';
+            prod.features.forEach(f => {
+                const item = document.createElement('div');
+                item.className = 'modal-feat-item';
+                item.innerHTML = `<span>⚡</span> ${f}`;
+                featContainer.appendChild(item);
+            });
+
+            document.getElementById('productModal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function closeModalOnBg(e) {
+            if (e.target.id === 'productModal') {
+                closeModal();
             }
         }
-    }
-}
-
-/* ── Вкладки ────────────────────────────────────── */
-document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const tab = btn.dataset.tab;
-
-        document.querySelectorAll('.tab-btn').forEach(b => {
-            b.classList.toggle('active', b === btn);
-            b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
-        });
-        document.querySelectorAll('.tab-panel').forEach(p => {
-            p.classList.toggle('active', p.id === 'panel-' + tab);
-        });
-    });
-});
-
-renderProducts();
-</script>
+    </script>
 </body>
 </html>
