@@ -325,8 +325,16 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 700;
         }
-        .key-btn.action:hover {
-            background: var(--amber);
+        .key-btn.action.ok {
+            background: linear-gradient(135deg, #10B981, #059669);
+            border-color: #34D399;
+            color: #FFFFFF;
+            font-size: 15px;
+            font-weight: 800;
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+        }
+        .key-btn.action.ok:hover {
+            background: #34D399;
             color: #000;
         }
 
@@ -832,7 +840,7 @@
                 <button class="key-btn" onclick="pressKey('9')">9</button>
                 <button class="key-btn action" onclick="clearCode()">C</button>
                 <button class="key-btn" onclick="pressKey('0')">0</button>
-                <button class="key-btn action" onclick="submitSearch()">OK ➔</button>
+                <button class="key-btn action ok" onclick="submitSearch()">OK ➔</button>
             </div>
 
             <!-- Ошибка поиска (если код не существует) -->
@@ -926,7 +934,7 @@
                 title: "Extracteur portable BISSELL SpotClean Pro",
                 category: "nettoyage",
                 featured: true,
-                img: "https://m.media-amazon.com/images/I/71wZ7x9QhUL._AC_SL1500_.jpg",
+                img: "https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B089XYV67R&Format=_SL400_&ID=AsinImage&MarketPlace=FR&ServiceVersion=20070822&WS=1",
                 quote: "Efface les taches incrustées de matelas, canapés et sièges auto en 30 secondes.",
                 verdict: "L'arme absolue contre les taches anciennes. Injection et aspiration puissante sans abîmer les tissus.",
                 features: [
@@ -941,7 +949,7 @@
                 title: "Brosse de nettoyage électrique rotative",
                 category: "nettoyage",
                 featured: false,
-                img: "https://m.media-amazon.com/images/I/71R2Hj+G8BL._AC_SL1500_.jpg",
+                img: "https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CP9P7T3T&Format=_SL400_&ID=AsinImage&MarketPlace=FR&ServiceVersion=20070822&WS=1",
                 quote: "Nettoie les joints de carrelage et la douche sans se casser le dos ni frotter.",
                 verdict: "Fait tourner la tête à 350 tours/minute. Les joints noirs redeviennent blancs comme neufs sans effort.",
                 features: [
@@ -956,7 +964,7 @@
                 title: "Ruban en cuivre pur anti-limaces",
                 category: "jardin",
                 featured: false,
-                img: "https://m.media-amazon.com/images/I/81xU9dJ5g4L._AC_SL1500_.jpg",
+                img: "https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07P96L4M5&Format=_SL400_&ID=AsinImage&MarketPlace=FR&ServiceVersion=20070822&WS=1",
                 quote: "Barrière naturelle infranchissable pour les limaces et escargots sans poison.",
                 verdict: "Une micro-réaction électrique naturelle repousse immédiatement les nuisibles sans danger pour vos animaux de compagnie.",
                 features: [
@@ -971,7 +979,7 @@
                 title: "Gel d'Aloe Vera 100% Pur & Bio",
                 category: "beaute",
                 featured: false,
-                img: "https://m.media-amazon.com/images/I/71c6P5i-vHL._AC_SL1500_.jpg",
+                img: "https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07T4Z7W15&Format=_SL400_&ID=AsinImage&MarketPlace=FR&ServiceVersion=20070822&WS=1",
                 quote: "Le secret naturel pour hydrater intensément les cheveux secs et apaiser la peau.",
                 verdict: "Pressé à froid sans additifs. Répare la fibre capillaire et élimine les pointes sèches dès la première application.",
                 features: [
@@ -990,28 +998,23 @@
             renderGrid(PRODUCTS_DB);
             checkUrlHash();
 
-            // Живой поиск при вводе в input
             const input = document.getElementById('codeInput');
-            input.addEventListener('input', (e) => {
-                const val = parseInt(e.target.value);
-                if (!isNaN(val)) {
-                    tryOpenByCode(val, false);
-                } else {
-                    document.getElementById('searchNotFound').style.display = 'none';
-                }
+            // При ручном вводе просто скрываем ошибку
+            input.addEventListener('input', () => {
+                document.getElementById('searchNotFound').style.display = 'none';
             });
 
-            // Нажатие Enter
+            // Нажатие Enter на клавиатуре телефона/ПК
             input.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') submitSearch();
             });
         });
 
-        // Клавиатура (Keypad)
+        // Клавиатура (Keypad): только дописывает цифры в поле, НЕ открывает модалку автоматически
         function pressKey(num) {
             const input = document.getElementById('codeInput');
             input.value = (input.value || '') + num;
-            tryOpenByCode(parseInt(input.value), false);
+            document.getElementById('searchNotFound').style.display = 'none';
         }
 
         function clearCode() {
