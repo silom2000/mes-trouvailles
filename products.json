@@ -13,7 +13,7 @@
       "✓ Réservoirs eau propre et eau sale séparés",
       "✓ Plus de 20 000 avis positifs en France"
     ],
-    "amazonUrl": "https://www.amazon.fr/dp/B00EZ7F27Y?tag=bertranna-21"
+    "amazonUrl": "https://amzn.to/4xIYZza"
   },
   {
     "code": 2,
@@ -62,5 +62,21 @@
       "✓ Multi-usage : masque cheveux, corps et visage"
     ],
     "amazonUrl": "https://amzn.to/4rxiNnO"
+  },
+  {
+    "code": 5,
+    "title": "Support Magnétique Mural",
+    "category": "maison",
+    "featured": false,
+    "img": "img/prod_5.jpg",
+    "hackMethod": "La technologie magnétique couplée à un adhésif industriel ultra-puissant fixe n'importe quel appareil en deux secondes, sans percer ni abîmer le mur.",
+    "quote": "Ton téléphone glisse, tombe, traîne partout — impossible de garder ton espace organisé.",
+    "verdict": "Posé en trente secondes, il libère ta surface de travail et garde ton téléphone ou ta tablette toujours accessible et visible.",
+    "features": [
+      "✓ Compatible smartphones et tablettes de toutes marques sans adaptateur",
+      "✓ Adhésif repositionnable — aucun trou, aucune trace laissée",
+      "✓ Rotation 360° pour ajuster l'angle parfait en un geste"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/2FB0GM5P35?tag=bertranna-21"
   }
 ]
