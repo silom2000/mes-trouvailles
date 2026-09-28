@@ -934,13 +934,13 @@
          БАЗА ТОВАРОВ С НОМЕРАМИ КОДОВ ДЛЯ ВИДЕО
          ═══════════════════════════════════════════════════ -->
     <script>
-        const PRODUCTS_DB = [
+        let PRODUCTS_DB = [
             {
                 code: 1,
                 title: "Extracteur portable BISSELL SpotClean Pro",
                 category: "nettoyage",
                 featured: true,
-                img: "img/bissell.jpg",
+                img: "https://m.media-amazon.com/images/I/81xGg6zWw6L._AC_SL1500_.jpg",
                 quote: "Efface les taches incrustées de matelas, canapés et sièges auto en 30 secondes.",
                 verdict: "L'arme absolue contre les taches anciennes. Injection et aspiration puissante sans abîmer les tissus.",
                 features: [
@@ -948,7 +948,7 @@
                     "✓ Réservoirs eau propre et eau sale séparés",
                     "✓ Plus de 20 000 avis positifs en France"
                 ],
-                amazonUrl: "https://amzn.to/4xIYZza"
+                amazonUrl: "https://www.amazon.fr/dp/B075LDF58H?tag=bertranna-21"
             },
             {
                 code: 2,
@@ -1000,7 +1000,18 @@
         let currentCategory = 'all';
 
         // Инициализация при загрузке
-        window.addEventListener('DOMContentLoaded', () => {
+        window.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const res = await fetch('products.json');
+                if (res.ok) {
+                    const data = await res.json();
+                    if (Array.isArray(data) && data.length > 0) {
+                        PRODUCTS_DB = data;
+                    }
+                }
+            } catch (e) {
+                console.log('Using default PRODUCTS_DB:', e);
+            }
             renderGrid(PRODUCTS_DB);
             checkUrlHash();
 
