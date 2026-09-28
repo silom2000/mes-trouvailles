@@ -338,39 +338,6 @@
             color: #000;
         }
 
-        /* Быстрые фишки последних видео */
-        .recent-chips {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            overflow-x: auto;
-            padding-bottom: 4px;
-            scrollbar-width: none;
-        }
-        .recent-chips::-webkit-scrollbar { display: none; }
-        .chips-label {
-            font-size: 11px;
-            font-weight: 600;
-            color: var(--text-muted);
-            white-space: nowrap;
-        }
-        .chip {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            padding: 4px 10px;
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--mint);
-            white-space: nowrap;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .chip:hover {
-            background: var(--mint);
-            color: #000;
-        }
-
         /* ── Навигация по категориям (Фильтры) ── */
         .category-scroll {
             display: flex;
@@ -853,15 +820,6 @@
             <div id="searchNotFound" class="search-not-found">
                 ⚠️ Oups ! Le code <strong>#<span id="errCode"></span></strong> n'existe pas encore. Choisis un produit ci-dessous 👇
             </div>
-
-            <!-- Быстрые фишки последних роликов -->
-            <div class="recent-chips">
-                <span class="chips-label">Vidéos récentes :</span>
-                <span class="chip" onclick="quickSelect(1)">#1 Matelas (Bissell)</span>
-                <span class="chip" onclick="quickSelect(2)">#2 Brosse Joints</span>
-                <span class="chip" onclick="quickSelect(3)">#3 Anti-Limaces</span>
-                <span class="chip" onclick="quickSelect(4)">#4 Gel Cheveux</span>
-            </div>
         </section>
 
         <!-- 3. ФИЛЬТРЫ КАТЕГОРИЙ -->
@@ -940,7 +898,7 @@
                 title: "Extracteur portable BISSELL SpotClean Pro",
                 category: "nettoyage",
                 featured: true,
-                img: "https://m.media-amazon.com/images/I/81xGg6zWw6L._AC_SL1500_.jpg",
+                img: "img/bissell.jpg",
                 quote: "Efface les taches incrustées de matelas, canapés et sièges auto en 30 secondes.",
                 verdict: "L'arme absolue contre les taches anciennes. Injection et aspiration puissante sans abîmer les tissus.",
                 features: [
@@ -948,7 +906,7 @@
                     "✓ Réservoirs eau propre et eau sale séparés",
                     "✓ Plus de 20 000 avis positifs en France"
                 ],
-                amazonUrl: "https://www.amazon.fr/dp/B075LDF58H?tag=bertranna-21"
+                amazonUrl: "https://www.amazon.fr/dp/B00EZ7F27Y?tag=bertranna-21"
             },
             {
                 code: 2,
@@ -1046,11 +1004,7 @@
             const input = document.getElementById('codeInput');
             const code = parseInt(input.value);
             if (!code) return;
-            tryOpenByCode(code, true);
-        }
-
-        function quickSelect(code) {
-            document.getElementById('codeInput').value = code;
+            input.value = '';
             tryOpenByCode(code, true);
         }
 
@@ -1075,7 +1029,7 @@
             if (window.location.hash) {
                 const hashNum = parseInt(window.location.hash.replace('#', ''));
                 if (!isNaN(hashNum)) {
-                    quickSelect(hashNum);
+                    tryOpenByCode(hashNum, false);
                 }
             }
         }
@@ -1146,6 +1100,7 @@
         }
 
         function closeModal() {
+            clearCode();
             document.getElementById('productModal').classList.remove('open');
             document.body.style.overflow = '';
         }
