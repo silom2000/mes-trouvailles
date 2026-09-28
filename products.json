@@ -1,0 +1,66 @@
+[
+  {
+    "code": 1,
+    "title": "Extracteur portable BISSELL SpotClean Pro",
+    "category": "nettoyage",
+    "featured": true,
+    "img": "https://m.media-amazon.com/images/I/81xGg6zWw6L._AC_SL1500_.jpg",
+    "hackMethod": "Technique de pré-détachage ciblé et extraction immédiate : dissoudre la saleté en surface puis aspirer l'humidité en profondeur avant qu'elle ne pénètre la mousse du canapé ou matelas.",
+    "quote": "Efface les taches incrustées de matelas, canapés et sièges auto en 30 secondes.",
+    "verdict": "L'arme absolue contre les taches anciennes. Injection et aspiration puissante sans abîmer les tissus.",
+    "features": [
+      "✓ Idéal matelas, tapis, tissus d'ameublement",
+      "✓ Réservoirs eau propre et eau sale séparés",
+      "✓ Plus de 20 000 avis positifs en France"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B075LDF58H?tag=bertranna-21"
+  },
+  {
+    "code": 2,
+    "title": "Brosse de nettoyage électrique rotative",
+    "category": "nettoyage",
+    "featured": false,
+    "img": "img/brosse.jpg",
+    "hackMethod": "Application d'une émulsion moussante active pour décoller la crasse : la vitesse mécanique pulvérise le calcaire des joints sans aucun frottement manuel épuisant.",
+    "quote": "Nettoie les joints de carrelage et la douche sans se casser le dos ni frotter.",
+    "verdict": "Fait tourner la tête à 350 tours/minute. Les joints noirs redeviennent blancs comme neufs sans effort.",
+    "features": [
+      "✓ Manche télescopique pour ne pas se pencher",
+      "✓ 4 têtes interchangeables incluses",
+      "✓ Batterie rechargeable longue durée"
+    ],
+    "amazonUrl": "https://amzn.to/4yW8hZA"
+  },
+  {
+    "code": 3,
+    "title": "Ruban en cuivre pur anti-limaces",
+    "category": "jardin",
+    "featured": false,
+    "img": "img/cuivre.jpg",
+    "hackMethod": "Barrière électrochimique naturelle en bordure de pots et jardinières : le contact du cuivre avec le mucus crée une micro-décharge répulsive, sans aucun granulé toxique ni poison dangereux pour les animaux.",
+    "quote": "Barrière naturelle infranchissable pour les limaces et escargots sans poison.",
+    "verdict": "Une micro-réaction électrique naturelle repousse immédiatement les nuisibles sans danger pour vos animaux de compagnie.",
+    "features": [
+      "✓ 100% sans produits chimiques ni poison",
+      "✓ Résiste à la pluie et au soleil des années",
+      "✓ Facile à coller autour des pots et potagers"
+    ],
+    "amazonUrl": "https://amzn.to/3V8MkYU"
+  },
+  {
+    "code": 4,
+    "title": "Gel d'Aloe Vera 100% Pur & Bio",
+    "category": "beaute",
+    "featured": false,
+    "img": "img/aloe.jpg",
+    "hackMethod": "Technique de scellage d'hydratation végétale : appliquer sur cheveux humides pour retenir l'eau au cœur de la fibre sans les silicones synthétiques qui étouffent les pointes.",
+    "quote": "Le secret naturel pour hydrater intensément les cheveux secs et apaiser la peau.",
+    "verdict": "Pressé à froid sans additifs. Répare la fibre capillaire et élimine les pointes sèches dès la première application.",
+    "features": [
+      "✓ Certifié Bio & Vegan",
+      "✓ Flacon pompe grand format très économique",
+      "✓ Multi-usage : masque cheveux, corps et visage"
+    ],
+    "amazonUrl": "https://amzn.to/4rxiNnO"
+  }
+]
