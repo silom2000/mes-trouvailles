@@ -960,7 +960,8 @@
         // Инициализация при загрузке
         window.addEventListener('DOMContentLoaded', async () => {
             try {
-                const res = await fetch('products.json');
+                // Добавляем timestamp для обхода кэша браузера телефона
+                const res = await fetch('products.json?v=' + Date.now(), { cache: 'no-store' });
                 if (res.ok) {
                     const data = await res.json();
                     if (Array.isArray(data) && data.length > 0) {
