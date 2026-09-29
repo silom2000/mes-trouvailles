@@ -142,5 +142,21 @@
       "✓ Texture ultra-légère non grasse à pénétration rapide, idéale pour une routine quotidienne matin et soir"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B07C5T3DKW?tag=bertranna-21"
+  },
+  {
+    "code": 10,
+    "title": "Détartrant Naturel pour Cafetière",
+    "category": "cuisine",
+    "featured": false,
+    "img": "img/prod_10.jpg",
+    "hackMethod": "L'acide lactique d'origine végétale attaque et dissout chimiquement les dépôts de calcaire sans abîmer les pièces internes de ta machine.",
+    "quote": "Le calcaire détruit silencieusement ta machine à café et gâche chaque tasse que tu prépares.",
+    "verdict": "Utilisé régulièrement, il maintient les performances optimales de ta machine, réduit la consommation d'énergie et garantit un café toujours savoureux.",
+    "features": [
+      "✓ Formule 100% végétale à base d'acide lactique naturel, douce avec les composants de ta machine",
+      "✓ Détartre plus rapidement et efficacement que les produits chimiques classiques du commerce",
+      "✓ Prolonge la durée de vie de ton appareil et préserve le goût authentique de ton café"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B008YETL18?tag=bertranna-21"
   }
 ]
