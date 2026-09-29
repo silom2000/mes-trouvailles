@@ -94,5 +94,21 @@
       "✓ Préserve la barrière cutanée avec les céramides et apaise les rougeurs via la niacinamide"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B0F3DJ5QCG?tag=bertranna-21"
+  },
+  {
+    "code": 7,
+    "title": "Ruban Double Face Puissant",
+    "category": "bricolage",
+    "featured": false,
+    "img": "img/prod_7.jpg",
+    "hackMethod": "Le ruban double face exploite une adhésion mécanique bilatérale instantanée, créant une liaison invisible entre deux surfaces sans vis, ni colle liquide salissante.",
+    "quote": "Marre de percer des trous pour accrocher vos décos sans abîmer vos murs ?",
+    "verdict": "Ce ruban Art3d amplifie chaque fixation grâce à ses 3 mètres d'adhérence industrielle, pour poser cadres, panneaux et objets en quelques secondes chrono.",
+    "features": [
+      "✓ Fixation ultra-résistante sans perçage ni outillage",
+      "✓ Compatible avec la majorité des surfaces lisses et semi-poreuses",
+      "✓ Retrait propre sans laisser de traces ni résidus"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B09K58K13V?tag=bertranna-21"
   }
 ]
