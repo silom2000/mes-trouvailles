@@ -110,5 +110,21 @@
       "✓ Retrait propre sans laisser de traces ni résidus"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B09K58K13V?tag=bertranna-21"
+  },
+  {
+    "code": 8,
+    "title": "Cadenas À Code Sans Clé",
+    "category": "maison",
+    "featured": false,
+    "img": "img/prod_8.jpg",
+    "hackMethod": "Avec un code à 4 chiffres personnalisable parmi 10 000 combinaisons uniques, tu sécurises n'importe quoi sans jamais transporter de clé.",
+    "quote": "Tu perds tes clés tout le temps et tu bloques devant ton casier ?",
+    "verdict": "Le corps en zinc et l'anse en acier trempé résistent aux chocs et intempéries, parfait pour la salle de sport, le garage ou les voyages.",
+    "features": [
+      "✓ 10 000 combinaisons possibles pour un code 100 % personnalisé et introuvable",
+      "✓ Corps en alliage de zinc haute résistance avec anse en acier trempé anti-casse",
+      "✓ Grands chiffres et fenêtre latérale pour reprogrammer le code en 6 étapes simples"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B07F38QMZK?tag=bertranna-21"
   }
 ]
