@@ -174,5 +174,21 @@
       "✓ Conformes EN 455 & EN 374 — approuvés contact alimentaire et produits chimiques"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B093SWH4D8?tag=bertranna-21"
+  },
+  {
+    "code": 12,
+    "title": "Ampoule LED Connectée Multicolore",
+    "category": "maison",
+    "featured": false,
+    "img": "img/prod_12.jpg",
+    "hackMethod": "Cette ampoule Wi-Fi exploite 16 millions de couleurs et la programmation horaire pour transformer instantanément l'atmosphère de n'importe quelle pièce depuis ton téléphone.",
+    "quote": "Régler l'ambiance lumineuse de ta pièce te prend du temps et te coûte cher.",
+    "verdict": "Compatible Alexa et pilotable à distance, elle automatise ta lumière et réduit ta consommation électrique jusqu'à 89% sans le moindre effort quotidien.",
+    "features": [
+      "✓ Contrôle vocal et à distance via l'app Tapo ou Alexa, même hors de chez toi",
+      "✓ 16 millions de couleurs et intensité ajustable pour une ambiance parfaite en deux secondes",
+      "✓ Économie jusqu'à 89% d'énergie avec programmation Lever/Coucher de soleil automatique"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B08GDC99PX?tag=bertranna-21"
   }
 ]
