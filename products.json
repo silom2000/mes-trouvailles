@@ -158,5 +158,21 @@
       "✓ Prolonge la durée de vie de ton appareil et préserve le goût authentique de ton café"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B008YETL18?tag=bertranna-21"
+  },
+  {
+    "code": 11,
+    "title": "Gants Nitrile Noirs Jetables",
+    "category": "nettoyage",
+    "featured": false,
+    "img": "img/prod_11.jpg",
+    "hackMethod": "Le nitrile forme une barrière chimique imperméable sur la peau, bloquant détergents, colorants et micro-organismes sans jamais déclencher d'allergie au latex.",
+    "quote": "Marre d'avoir les mains cramées et tachées après chaque corvée ou bricolage ?",
+    "verdict": "Épais, texturés et sans poudre, ces gants s'enfilent en deux secondes et te laissent les mains intactes après n'importe quelle tâche salissante.",
+    "features": [
+      "✓ Sans latex ni poudre — zéro risque d'allergie ou d'irritation cutanée",
+      "✓ Embouts texturés pour une prise ferme et précise, même sur surfaces humides",
+      "✓ Conformes EN 455 & EN 374 — approuvés contact alimentaire et produits chimiques"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B093SWH4D8?tag=bertranna-21"
   }
 ]
