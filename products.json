@@ -190,5 +190,21 @@
       "✓ Économie jusqu'à 89% d'énergie avec programmation Lever/Coucher de soleil automatique"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B08GDC99PX?tag=bertranna-21"
+  },
+  {
+    "code": 13,
+    "title": "Pack LED Blanc Chaud",
+    "category": "maison",
+    "featured": false,
+    "img": "img/prod_13.jpg",
+    "hackMethod": "La technologie LED réduit la consommation d'énergie de 80% et garantit une durée de vie de 15 000 heures, soit 15 ans d'utilisation normale.",
+    "quote": "Tu en as marre de grimper sur l'escabeau pour changer des ampoules grillées ?",
+    "verdict": "Ce pack de 6 ampoules éclaire chaque pièce avec une lumière chaleureuse à 2700K, identique à l'incandescent classique, sans jamais griller.",
+    "features": [
+      "✓ Économise 80% d'énergie par rapport aux halogènes traditionnelles dès le premier allumage",
+      "✓ Dure jusqu'à 15 ans — plus jamais besoin de racheter ou de remplacer une ampoule",
+      "✓ Lumière chaude 2700K ultra-cosy, parfaite pour le salon, la chambre ou la cuisine"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B01KHILJ5O?tag=bertranna-21"
   }
 ]
