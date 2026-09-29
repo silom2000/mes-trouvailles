@@ -78,5 +78,21 @@
       "✓ Niacinamide + Galactomyces : unifie le teint, atténue les taches et booste l'éclat naturel"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B0B2RM68G2?tag=bertranna-21"
+  },
+  {
+    "code": 6,
+    "title": "Gel Anti-Imperfections CeraVe",
+    "category": "beaute",
+    "featured": false,
+    "img": "img/prod_6.jpg",
+    "hackMethod": "L'acide salicylique à 2% pénètre directement dans les pores pour les déboucher, tandis que l'argile blanche absorbe le sébum en excès dès le lavage.",
+    "quote": "Les boutons qui reviennent sans cesse ruinent ta peau et ta confiance chaque matin.",
+    "verdict": "Ce gel nettoyant visage et corps dégage les pores dès la première utilisation et lisse visiblement la peau en une seule semaine.",
+    "features": [
+      "✓ Débouche les pores en profondeur dès la première utilisation grâce à l'acide salicylique à 2%",
+      "✓ Matifie et purifie grâce à l'argile blanche qui capte et élimine le sébum en excès",
+      "✓ Préserve la barrière cutanée avec les céramides et apaise les rougeurs via la niacinamide"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B0F3DJ5QCG?tag=bertranna-21"
   }
 ]
