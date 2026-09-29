@@ -126,5 +126,21 @@
       "✓ Grands chiffres et fenêtre latérale pour reprogrammer le code en 6 étapes simples"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B07F38QMZK?tag=bertranna-21"
+  },
+  {
+    "code": 9,
+    "title": "Crème Contour Yeux CeraVe",
+    "category": "beaute",
+    "featured": false,
+    "img": "img/prod_9.jpg",
+    "hackMethod": "L'acide hyaluronique attire et retient l'eau dans les cellules tandis que les céramides réparent la barrière cutanée fragilisée autour des yeux.",
+    "quote": "Tes cernes et poches sous les yeux sabotent ton regard même après huit heures de sommeil.",
+    "verdict": "Appliquée matin et soir, cette crème légère décongestionne, hydrate et répare visiblement le contour des yeux en agissant pendant 24 heures.",
+    "features": [
+      "✓ Formule avec 3 céramides essentiels et niacinamide pour restaurer activement la peau fragilisée du contour des yeux",
+      "✓ Action décongestionnante en continu sur 24h pour réduire visiblement les poches et atténuer les cernes",
+      "✓ Texture ultra-légère non grasse à pénétration rapide, idéale pour une routine quotidienne matin et soir"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B07C5T3DKW?tag=bertranna-21"
   }
 ]
