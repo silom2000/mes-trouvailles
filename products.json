@@ -13,7 +13,7 @@
       "✓ Réservoirs eau propre et eau sale séparés",
       "✓ Plus de 20 000 avis positifs en France"
     ],
-    "amazonUrl": "https://amzn.to/4xIYZza"
+    "amazonUrl": "https://link.amazon/A01sEaICp"
   },
   {
     "code": 2,
@@ -206,5 +206,21 @@
       "✓ Lumière chaude 2700K ultra-cosy, parfaite pour le salon, la chambre ou la cuisine"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B01KHILJ5O?tag=bertranna-21"
+  },
+  {
+    "code": 14,
+    "title": "La Pierre d'Argent Universelle",
+    "category": "nettoyage",
+    "featured": false,
+    "img": "img/prod_14.jpg",
+    "hackMethod": "La formule minérale micronisée agit par micro-abrasion douce : elle décolle les dépôts tenaces tout en libérant des agents nettoyants naturels sans produits chimiques.",
+    "quote": "Tu frottes encore et encore, mais les taches tenaces semblent impossibles à faire disparaître !",
+    "verdict": "Certifiée ECOCERT et fabriquée en France, cette pierre remplace des dizaines de produits chimiques et protège durablement chaque surface traitée.",
+    "features": [
+      "✓ Nettoie chrome, inox, carrelage, vitres et acrylique sans rayer grâce à sa micro-abrasion ultra-douce",
+      "✓ Dépose une couche protectrice brillante après chaque passage pour un effet longue durée sur vos surfaces",
+      "✓ Éponge fournie, sans rinçage fastidieux, certifiée ECOCERT — efficace, économique et respectueux de l'environnement"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B00V8RIUKG?tag=bertranna-21"
   }
 ]
