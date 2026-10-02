@@ -222,5 +222,21 @@
       "✓ Formule nourrissante aux vitamines A et E pour peaux déshydratées"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B07XF23G3N?tag=bertranna-21"
+  },
+  {
+    "code": 16,
+    "title": "Réglette LED Détecteur Sans Fil",
+    "category": "maison",
+    "featured": false,
+    "img": "img/prod_16.jpg",
+    "hackMethod": "Placer un réflecteur magnétique à détection thermique active automatiquement la lumière sans aucun câblage dès l'ouverture de votre meuble.",
+    "quote": "Chercher dans le noir au fond d'un placard sombre sans visibilité vous fait perdre un temps précieux.",
+    "verdict": "Cette réglette ultra-fine s'aimante partout en un clin d'œil, transformant instantanément vos recoins sombres en espaces parfaitement éclairés sans travaux.",
+    "features": [
+      "✓ Détecteur de mouvement précis avec 4 modes d'allumage",
+      "✓ 3 températures de couleur et intensité lumineuse modulable",
+      "✓ Fixation magnétique immédiate et batterie rechargeable USB-C"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B0F1C56SR1?tag=bertranna-21"
   }
 ]
