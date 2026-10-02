@@ -206,5 +206,21 @@
       "✓ Éponge fournie, sans rinçage fastidieux, certifiée ECOCERT — efficace, économique et respectueux de l'environnement"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B00V8RIUKG?tag=bertranna-21"
+  },
+  {
+    "code": 15,
+    "title": "Huile Réparatrice Bi-Oil 200ml",
+    "category": "beaute",
+    "featured": false,
+    "img": "img/prod_15.jpg",
+    "hackMethod": "L'action combinée de vitamines A et E avec un lipide fluide optimise le renouvellement cellulaire en restaurant l'élasticité profonde des tissus cutanés.",
+    "quote": "Marre de voir ces vergetures et cicatrices persister sur votre peau malgré les crèmes classiques ?",
+    "verdict": "Grâce au Purcellin Oil, cette formule pénètre instantanément sans film gras pour sceller l'hydratation et booster durablement la régénération cutanée.",
+    "features": [
+      "✓ Atténue visiblement les cicatrices et vergetures récentes ou anciennes",
+      "✓ Texture légère enrichie en Purcellin Oil à pénétration rapide",
+      "✓ Formule nourrissante aux vitamines A et E pour peaux déshydratées"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B07XF23G3N?tag=bertranna-21"
   }
 ]
