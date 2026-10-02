@@ -972,6 +972,18 @@
                 console.log('Using default PRODUCTS_DB:', e);
             }
             renderGrid(PRODUCTS_DB);
+
+            // Deep-link: ?p=10 → прямой переход на Amazon (для био TikTok)
+            const urlParams = new URLSearchParams(window.location.search);
+            const deepCode = parseInt(urlParams.get('p'));
+            if (deepCode) {
+                const deepProduct = PRODUCTS_DB.find(p => p.code === deepCode);
+                if (deepProduct && deepProduct.amazonUrl) {
+                    window.location.href = deepProduct.amazonUrl;
+                    return; // Не рендерим остальное — сразу уходим на Amazon
+                }
+            }
+
             checkUrlHash();
 
             const input = document.getElementById('codeInput');
@@ -1006,17 +1018,22 @@
             const code = parseInt(input.value);
             if (!code) return;
             input.value = '';
-            tryOpenByCode(code, true);
+            tryOpenByCode(code, true, true);
         }
 
         // Поиск товара по коду
-        function tryOpenByCode(code, showAlertOnFail) {
+        function tryOpenByCode(code, showAlertOnFail, directToAmazon) {
             const errBox = document.getElementById('searchNotFound');
             const found = PRODUCTS_DB.find(p => p.code === code);
 
             if (found) {
                 errBox.style.display = 'none';
-                openModal(found);
+                if (directToAmazon && found.amazonUrl) {
+                    // Прямой переход на Amazon — минимум шагов для покупателя
+                    window.location.href = found.amazonUrl;
+                } else {
+                    openModal(found);
+                }
             } else {
                 if (showAlertOnFail) {
                     document.getElementById('errCode').textContent = code;
