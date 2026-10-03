@@ -302,5 +302,21 @@
       "✓ Nervures anti-eau stagnante et compartiment amovible"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B07YLGKFR9?tag=bertranna-21"
+  },
+  {
+    "code": 22,
+    "title": "Pulvérisateur d'Huile 2-en-1 Anti-UV",
+    "category": "cuisine",
+    "featured": false,
+    "img": "img/prod_22.jpg",
+    "hackMethod": "La micronisation de l'huile couvre toute la poêle avec 80% de gras en moins, tandis que l'opacité bloque l'oxydation due aux rayons UV.",
+    "quote": "Fini les plats qui baignent dans l'huile et les bouteilles grasses qui rancissent à la lumière.",
+    "verdict": "Ce flacon 2-en-1 en verre foncé combine spray brumisateur et bec verseur tout en protégeant vos meilleures huiles de la dégradation lumineuse.",
+    "features": [
+      "✓ Double fonction ultra-pratique : pulvérisateur fin ou verseur classique",
+      "✓ Verre vert foncé anti-UV pour conserver la fraîcheur de l'huile",
+      "✓ Dosage précis pour une cuisson saine à l'Airfryer ou à la poêle"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B0DJXSFLJ5?tag=bertranna-21"
   }
 ]
