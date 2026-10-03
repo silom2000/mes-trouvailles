@@ -238,5 +238,21 @@
       "✓ Fixation magnétique immédiate et batterie rechargeable USB-C"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B0F1C56SR1?tag=bertranna-21"
+  },
+  {
+    "code": 17,
+    "title": "Déodorant Maximum Protection 96h",
+    "category": "beaute",
+    "featured": false,
+    "img": "img/prod_17.jpg",
+    "hackMethod": "La formule brevetée antitranspirante agit directement sur les glandes sudoripares en formant une barrière invisible qui bloque la transpiration jusqu'à 96 heures consécutives.",
+    "quote": "Tu transpires abondamment malgré ton déodorant et les auréoles ruinent tes vêtements préférés.",
+    "verdict": "3x plus efficace que les déodorants classiques, ce stick Clean Scent offre une protection longue durée sans réapplication, même lors des journées intenses.",
+    "features": [
+      "✓ Jusqu'à 96h de protection antitranspirante continue sans réapplication nécessaire",
+      "✓ Formule brevetée 3x plus efficace contre transpiration excessive et mauvaises odeurs",
+      "✓ Parfum Clean Scent frais et neutre, conçu pour un usage féminin quotidien"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B00AI7COA4?tag=bertranna-21"
   }
 ]
