@@ -318,5 +318,21 @@
       "✓ Dosage précis pour une cuisson saine à l'Airfryer ou à la poêle"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B0DJXSFLJ5?tag=bertranna-21"
+  },
+  {
+    "code": 23,
+    "title": "Nettoyant Machine à Laver Bosch",
+    "category": "nettoyage",
+    "featured": false,
+    "img": "img/prod_23.jpg",
+    "hackMethod": "Les résidus de lessive et le calcaire s'accumulent en silence dans le tambour et les joints, créant bactéries et odeurs tenaces. Un nettoyage mensuel ciblé brise ce cycle.",
+    "quote": "Ta machine à laver sent mauvais et tes vêtements ressortent jamais vraiment propres ?",
+    "verdict": "Ce nettoyant Bosch officiel dissout en profondeur dépôts et biofilm invisibles, redonnant à ta machine une hygiène optimale sans effort ni démontage.",
+    "features": [
+      "✓ Élimine les dépôts de lessive et de calcaire incrustés dans le tambour",
+      "✓ Formule certifiée Bosch pour une compatibilité totale avec ta machine",
+      "✓ Neutralise les mauvaises odeurs durablement pour des lavages vraiment frais"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B07FCNFB5W?tag=bertranna-21"
   }
 ]
