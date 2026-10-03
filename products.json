@@ -254,5 +254,21 @@
       "✓ Parfum Clean Scent frais et neutre, conçu pour un usage féminin quotidien"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B00AI7COA4?tag=bertranna-21"
+  },
+  {
+    "code": 18,
+    "title": "Enceinte Bluetooth Son Puissant",
+    "category": "maison",
+    "featured": false,
+    "img": "img/prod_18.jpg",
+    "hackMethod": "Posée dans un coin ou contre un mur, l'enceinte exploite la réflexion sonore naturelle pour amplifier les basses et remplir l'espace.",
+    "quote": "Marre d'une musique étouffée qui gâche vos soirées à la maison ou dehors ?",
+    "verdict": "Avec 24 heures d'autonomie et sa résistance à l'eau, elle accompagne chaque moment sans compromis sur la qualité sonore.",
+    "features": [
+      "✓ 24h d'autonomie continue pour écouter jusqu'à 500 chansons sans recharger",
+      "✓ Technologie BassUp pour des basses profondes et un son riche et immersif",
+      "✓ Résistante à l'eau et aux chocs, parfaite en intérieur comme en extérieur"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B01MTB55WH?tag=bertranna-21"
   }
 ]
