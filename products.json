@@ -286,5 +286,21 @@
       "✓ Compatible lave-vaisselle pour un entretien rapide et sans effort après chaque utilisation"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B000YDO2LG?tag=bertranna-21"
+  },
+  {
+    "code": 20,
+    "title": "Séchoir Vaisselle Extensible Acier",
+    "category": "cuisine",
+    "featured": false,
+    "img": "img/prod_20.jpg",
+    "hackMethod": "Les nervures surélevées créent une circulation d'air sous chaque verre, évacuant l'humidité naturellement sans laisser de traces. Le bec pivotant à trois positions dirige l'eau exactement vers l'évier.",
+    "quote": "La vaisselle mouillée entassée sur votre plan de travail ruine l'organisation de toute votre cuisine.",
+    "verdict": "Extensible à la demande et doté d'un compartiment à couverts amovible, il transforme n'importe quel plan de travail en espace cuisine parfaitement maîtrisé.",
+    "features": [
+      "✓ Structure extensible modulable pour absorber petites vaisselles comme grandes tablées sans débordement",
+      "✓ Bec d'égouttage pivotant à 3 positions pour diriger l'écoulement précisément vers l'évier",
+      "✓ Nervures surélevées anti-stagnation pour des verres impeccablement secs, sans auréoles ni humidité résiduelle"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B07YLGKFR9?tag=bertranna-21"
   }
 ]
