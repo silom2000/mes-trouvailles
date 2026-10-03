@@ -270,5 +270,21 @@
       "✓ Résistante à l'eau et aux chocs, parfaite en intérieur comme en extérieur"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B01MTB55WH?tag=bertranna-21"
+  },
+  {
+    "code": 19,
+    "title": "Mandoline Réglable OXO",
+    "category": "cuisine",
+    "featured": false,
+    "img": "img/prod_19.jpg",
+    "hackMethod": "La lame en acier inoxydable glisse à angle fixe, produisant des tranches d'épaisseur constante en un seul geste fluide et précis.",
+    "quote": "Couper des légumes en tranches égales à la main prend une éternité et abîme les doigts.",
+    "verdict": "La mandoline OXO remplace 10 minutes de découpe laborieuse par quelques secondes de glissade, avec des résultats dignes d'un chef.",
+    "features": [
+      "✓ Trois réglages d'épaisseur pour passer des chips croustillantes aux carpaccios ultra-fins en un clic",
+      "✓ Ouverture transparente pour voir les tranches se former sans jamais interrompre votre cadence de découpe",
+      "✓ Compatible lave-vaisselle pour un entretien rapide et sans effort après chaque utilisation"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B000YDO2LG?tag=bertranna-21"
   }
 ]
