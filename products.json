@@ -334,5 +334,21 @@
       "✓ Neutralise les mauvaises odeurs durablement pour des lavages vraiment frais"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B07FCNFB5W?tag=bertranna-21"
+  },
+  {
+    "code": 24,
+    "title": "Ruban Adhésif Barrière Protectrice",
+    "category": "jardin",
+    "featured": false,
+    "img": "img/prod_24.jpg",
+    "hackMethod": "Les fourmis protègent activement les pucerons pour récolter leur miellat sucré ; bloquer leur ascension sur le tronc brise net cette symbiose destructrice.",
+    "quote": "Marre de voir vos plantes dévorées par les pucerons protégés par des colonies de fourmis envahissantes ?",
+    "verdict": "Ce ruban ultra-adhésif crée un barrage physique infranchissable autour des tiges, isolant les pucerons des fourmis sans aucun produit chimique nocif.",
+    "features": [
+      "✓ Barrière adhésive physique totalement infranchissable",
+      "✓ Pose express et propre sur tout tronc",
+      "✓ Protection végétale durable sans produits toxiques"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B0FRJ91ML5?tag=bertranna-21"
   }
 ]
