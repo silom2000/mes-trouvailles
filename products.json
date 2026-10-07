@@ -350,5 +350,21 @@
       "✓ Protection végétale durable sans produits toxiques"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B0FRJ91ML5?tag=bertranna-21"
+  },
+  {
+    "code": 25,
+    "title": "Pulvérisateur Haute Pression en Laiton",
+    "category": "jardin",
+    "featured": false,
+    "img": "img/prod_25.jpg",
+    "hackMethod": "Infusez des épluchures de pomme de terre dans de l'eau bouillante avec du sel et du liquide vaisselle pour détruire la racine en 48h.",
+    "quote": "Les mauvaises herbes envahissent votre allée et reviennent sans cesse malgré des heures de désherbage ?",
+    "verdict": "Ce pulvérisateur en laiton haute pression résiste aux mélanges naturels et permet de cibler précisément chaque mauvaise herbe sans vous baisser ni vous fatiguer.",
+    "features": [
+      "✓ Buse en laiton et cuivre ultra-résistante à la corrosion",
+      "✓ Jet haute pression réglable pour un ciblage ultra-précis",
+      "✓ Poignée ergonomique qui réduit la fatigue des mains"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B0HLT2FJLF?tag=bertranna-21"
   }
 ]
