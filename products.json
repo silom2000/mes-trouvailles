@@ -350,5 +350,21 @@
       "✓ Poignée ergonomique qui réduit la fatigue des mains"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B0HLT2FJLF?tag=bertranna-21"
+  },
+  {
+    "code": 26,
+    "title": "Pastilles en Feutre Adhésif",
+    "category": "maison",
+    "featured": false,
+    "img": "img/prod_26.jpg",
+    "hackMethod": "L'odeur forte du baume mentholé agit comme un répulsif olfactif naturel ultra-efficace pour éloigner instantanément votre félin de vos meubles.",
+    "quote": "Vous en avez marre de voir votre chat détruire votre canapé préféré avec ses griffes ?",
+    "verdict": "Appliquez le baume sur ces pastilles en feutre adhésives et cachez-les sous le canapé pour protéger le tissu tout en diffusant l'odeur.",
+    "features": [
+      "✓ Fixation auto-adhésive puissante qui tient fermement sur toutes les surfaces",
+      "✓ Matériau en feutre absorbant idéal pour retenir et diffuser le baume",
+      "✓ Conception discrète pour protéger vos meubles sans jamais abîmer le tissu"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B0H9FCLT3Q?tag=bertranna-21"
   }
 ]
