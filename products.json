@@ -366,5 +366,21 @@
       "✓ Conception discrète pour protéger vos meubles sans jamais abîmer le tissu"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B0H9FCLT3Q?tag=bertranna-21"
+  },
+  {
+    "code": 27,
+    "title": "Détranspirant Etiaxil Peaux Sensibles",
+    "category": "beaute",
+    "featured": false,
+    "img": "img/prod_27.jpg",
+    "hackMethod": "Appliqué le soir sur peau parfaitement sèche, son complexe breveté endort les glandes sudoripares pour stopper l'humidité pendant plusieurs jours.",
+    "quote": "Marre des auréoles gênantes qui ruinent vos chemises et détruisent votre confiance en public ?",
+    "verdict": "Ce traitement ciblé remplace vos déodorants quotidiens inefficaces en assurant jusqu'à cinq jours de protection totale avec une seule application.",
+    "features": [
+      "✓ Efficacité cliniquement prouvée de 3 à 5 jours",
+      "✓ Formule CPX haute tolérance sans parfum",
+      "✓ Format bille ultra économique et ciblé"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B086R8LQJ9?tag=bertranna-21"
   }
 ]
