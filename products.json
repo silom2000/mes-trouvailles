@@ -382,21 +382,5 @@
       "✓ Format bille ultra économique et ciblé"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B086R8LQJ9?tag=bertranna-21"
-  },
-  {
-    "code": 28,
-    "title": "Brosse Rotative Sans Fil 9-en-1",
-    "category": "nettoyage",
-    "featured": false,
-    "img": "img/prod_28.jpg",
-    "hackMethod": "Le percarbonate de sodium dissous dans l'eau chaude libère de l'oxygène actif, décomposant instantanément les moisissures tenaces et le calcaire incrusté.",
-    "quote": "Frotter les joints moisis de la douche à genoux pendant des heures détruit votre dos.",
-    "verdict": "Cette brosse rotative décuple l'action chimique en faisant pénétrer la mousse active en profondeur sans aucun effort physique pour vos bras.",
-    "features": [
-      "✓ 9 têtes interchangeables adaptées à chaque recoin",
-      "✓ 3 vitesses puissantes éliminant l'effort manuel",
-      "✓ Batterie rechargeable sans fil pour nettoyer partout"
-    ],
-    "amazonUrl": "https://www.amazon.fr/dp/B0HLF4KHGS?tag=bertranna-21"
   }
 ]
