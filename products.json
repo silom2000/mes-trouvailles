@@ -382,5 +382,21 @@
       "✓ Format bille ultra économique et ciblé"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B086R8LQJ9?tag=bertranna-21"
+  },
+  {
+    "code": 28,
+    "title": "Spray Peeling Purifiant Medicube",
+    "category": "beaute",
+    "featured": false,
+    "img": "img/prod_28.jpg",
+    "hackMethod": "L'acide hypochloreux neutralise instantanément les bactéries responsables des imperfections tout en apaisant l'inflammation cellulaire cutanée sans jamais agresser l'épiderme.",
+    "quote": "Marre des boutons tenaces dans le dos et du grain de peau rugueux qui gâchent l'été ?",
+    "verdict": "Ce spray ciblé pulvérise uniformément la formule même dans les zones difficiles d'accès, purifiant votre dos sans aucun frottement douloureux.",
+    "features": [
+      "✓ Diffusion brume pratique à 360°",
+      "✓ Formule antibactérienne à l'acide hypochloreux",
+      "✓ Lisse visiblement le grain de peau"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B0FPCC599C?tag=bertranna-21"
   }
 ]
