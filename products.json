@@ -398,5 +398,21 @@
       "✓ Lisse visiblement le grain de peau"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B0FPCC599C?tag=bertranna-21"
+  },
+  {
+    "code": 29,
+    "title": "Pulvérisateur Électrique Rechargeable Sans Fil",
+    "category": "maison",
+    "featured": false,
+    "img": "img/prod_29.jpg",
+    "hackMethod": "L'acide acétique du vinaigre blanc combiné aux aldéhydes de cannelle neutralise instantanément les phéromones des fourmis et stoppe net leur progression.",
+    "quote": "Marre de voir des colonnes de fourmis envahir votre cuisine malgré vos nettoyages répétés ?",
+    "verdict": "Grâce à sa pression constante, ce pulvérisateur électrique dépose une brume fine et continue dans chaque recoin sans fatiguer vos mains.",
+    "features": [
+      "✓ Pulvérisation automatique continue sans pompage manuel",
+      "✓ Buse réglable pour cibler plinthes et fissures",
+      "✓ Batterie rechargeable par câble USB universel"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B0FWKBTG6C?tag=bertranna-21"
   }
 ]
