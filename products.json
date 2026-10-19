@@ -414,5 +414,21 @@
       "✓ Batterie rechargeable par câble USB universel"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B0FWKBTG6C?tag=bertranna-21"
+  },
+  {
+    "code": 30,
+    "title": "Infuseur à Thé Inox Ultra-Fin",
+    "category": "cuisine",
+    "featured": false,
+    "img": "img/prod_30.jpg",
+    "hackMethod": "Infuser directement des feuilles brutes en vrac extrait tous les arômes purs sans dégrader de polymères synthétiques sous la haute température.",
+    "quote": "Boire des milliards de microplastiques invisibles infusés dans sa tasse brûlante gâche le plaisir du thé quotidien.",
+    "verdict": "Cette boule en inox alimentaire filtre parfaitement les débris végétaux et garantit une infusion saine, lavable et réutilisable à l'infini.",
+    "features": [
+      "✓ Maille micro-perforée retenant même les plus fines particules",
+      "✓ Acier inoxydable de qualité alimentaire garanti sans microplastiques",
+      "✓ Système de fermeture sécurisé facile à ouvrir et nettoyer"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B0FX61TWHQ?tag=bertranna-21"
   }
 ]
