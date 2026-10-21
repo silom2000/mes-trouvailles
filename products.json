@@ -208,18 +208,18 @@
     "amazonUrl": "https://www.amazon.fr/dp/B00V8RIUKG?tag=bertranna-21"
   },
   {
-    "code": 15,
-    "title": "Huile Réparatrice Bi-Oil 200ml",
+    "code": 33,
+    "title": "Huile de Soin Régénérante Bi-Oil",
     "category": "beaute",
     "featured": false,
-    "img": "img/prod_15.jpg",
-    "hackMethod": "L'action combinée de vitamines A et E avec un lipide fluide optimise le renouvellement cellulaire en restaurant l'élasticité profonde des tissus cutanés.",
-    "quote": "Marre de voir ces vergetures et cicatrices persister sur votre peau malgré les crèmes classiques ?",
-    "verdict": "Grâce au Purcellin Oil, cette formule pénètre instantanément sans film gras pour sceller l'hydratation et booster durablement la régénération cutanée.",
+    "img": "img/prod_33.jpg",
+    "hackMethod": "Masser la peau avec des lipides ciblés permet aux vitamines d'activer le renouvellement cellulaire pour estomper rapidement les marques cutanées.",
+    "quote": "Marre des vergetures tenaces et des cicatrices visibles qui gâchent l'aspect de votre peau au quotidien ?",
+    "verdict": "Grâce à sa formule unique, cette huile accélère la régénération cutanée et estompe les vergetures sans fini gras au quotidien.",
     "features": [
-      "✓ Atténue visiblement les cicatrices et vergetures récentes ou anciennes",
-      "✓ Texture légère enrichie en Purcellin Oil à pénétration rapide",
-      "✓ Formule nourrissante aux vitamines A et E pour peaux déshydratées"
+      "✓ Atténue visiblement cicatrices et vergetures récentes ou anciennes",
+      "✓ Formule enrichie en Purcellin Oil non grasse et absorbante",
+      "✓ Soin idéal pour maintenir l'élasticité cutanée pendant la grossesse"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B07XF23G3N?tag=bertranna-21"
   },
