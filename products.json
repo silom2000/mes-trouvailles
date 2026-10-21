@@ -430,5 +430,21 @@
       "✓ Système de fermeture sécurisé facile à ouvrir et nettoyer"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B0FX61TWHQ?tag=bertranna-21"
+  },
+  {
+    "code": 31,
+    "title": "Sérum Acide Hyaluronique The Ordinary",
+    "category": "beaute",
+    "featured": false,
+    "img": "img/prod_31.jpg",
+    "hackMethod": "Appliquez ce sérum sur une peau légèrement humide : ses molécules hygroscopiques retiennent l'eau pour repulper intensément votre barrière cutanée déshydratée.",
+    "quote": "Marre d'avoir la peau qui tiraille et des ridules marquées malgré vos crèmes hydratantes classiques ?",
+    "verdict": "Enrichi en céramides ciblés, ce sérum décuple l'hydratation de votre crème habituelle sans multiplier les étapes ni dépenser une fortune.",
+    "features": [
+      "✓ Hydratation multi-profondeur grâce à cinq formes d'acide hyaluronique",
+      "✓ Céramides protecteurs renforçant durablement la barrière cutanée",
+      "✓ Texture fluide non grasse enrichie en pro-vitamine B5 repulpante"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B01MYEZPC8?tag=bertranna-21"
   }
 ]
