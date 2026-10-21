@@ -446,5 +446,21 @@
       "✓ Texture fluide non grasse enrichie en pro-vitamine B5 repulpante"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B01MYEZPC8?tag=bertranna-21"
+  },
+  {
+    "code": 32,
+    "title": "Mini déshumidificateur d'air silencieux",
+    "category": "maison",
+    "featured": false,
+    "img": "img/prod_32.jpg",
+    "hackMethod": "Aérer dix minutes abaisse le taux d'humidité, mais stabiliser durablement l'air intérieur empêche physiquement la vapeur de condenser sur vos vitres.",
+    "quote": "Marre des vitres ruisselantes d'eau chaque matin et des moisissures toxiques sur vos joints ?",
+    "verdict": "Cet appareil compact absorbe activement jusqu'à 350 ml d'eau par jour, gardant vos vitres parfaitement sèches sans le moindre effort quotidien.",
+    "features": [
+      "✓ Extraction continue jusqu'à 350 ml par jour",
+      "✓ Fonctionnement ultra silencieux adapté aux chambres",
+      "✓ Arrêt automatique sécurisé quand le réservoir est plein"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B0GNL6KJLC?tag=bertranna-21"
   }
 ]
