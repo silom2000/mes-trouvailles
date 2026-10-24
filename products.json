@@ -478,5 +478,21 @@
       "✓ Conception robuste et durable résistante à l'eau bouillante"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B0HC4H7V55?tag=bertranna-21"
+  },
+  {
+    "code": 35,
+    "title": "Rails Réglables Pour Clayettes Frigo",
+    "category": "cuisine",
+    "featured": false,
+    "img": "img/prod_35.jpg",
+    "hackMethod": "En exploitant la stratification spatiale verticale, vous doublez immédiatement les surfaces de rangement utiles sans saturer le volume d'air réfrigéré disponible.",
+    "quote": "Marre d'un frigo saturé où l'espace vertical reste totalement inexploité dans votre petite cuisine ?",
+    "verdict": "Ces rails robustes fixent vos clayettes à la hauteur exacte voulue, créant un agencement sur-mesure parfait en seulement quelques secondes chrono.",
+    "features": [
+      "✓ Installation rapide et clipsable sans aucun perçage complexe",
+      "✓ Compatibilité universelle pour la plupart des réfrigérateurs et congélateurs",
+      "✓ Alliage haute résistance assurant une parfaite stabilité sous charge"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B0HLJSFSCT?tag=bertranna-21"
   }
 ]
