@@ -462,5 +462,21 @@
       "✓ Arrêt automatique sécurisé quand le réservoir est plein"
     ],
     "amazonUrl": "https://www.amazon.fr/dp/B0GNL6KJLC?tag=bertranna-21"
+  },
+  {
+    "code": 34,
+    "title": "Brosse à Vaisselle Ergonomique",
+    "category": "nettoyage",
+    "featured": false,
+    "img": "img/prod_34.jpg",
+    "hackMethod": "Faites bouillir du vinaigre blanc avec du bicarbonate : la réaction effervescente décolle instantanément les dépôts carbonisés incrustés au fond de la casserole.",
+    "quote": "Frotter une casserole brûlée pendant des heures sans résultat ruine complètement votre soirée et vos bras.",
+    "verdict": "Cette brosse ergonomique amplifie l'action chimique en délogeant les résidus ramollis sans jamais rayer vos ustensiles ni fatiguer vos poignets.",
+    "features": [
+      "✓ Poils haute densité pour éliminer les résidus tenaces sans rayer",
+      "✓ Manche ergonomique antidérapant assurant une pression maximale sans effort",
+      "✓ Conception robuste et durable résistante à l'eau bouillante"
+    ],
+    "amazonUrl": "https://www.amazon.fr/dp/B0HC4H7V55?tag=bertranna-21"
   }
 ]
